@@ -1,0 +1,31 @@
+
+class Solution:
+    def isLucky(self, n): 
+        #RETURN True OR False
+        position=n
+        num=2
+        while position>=num:
+            if position%num==0:
+                return 0
+            position=position-(position//num)
+            num+=1
+        return 1
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+#contributed by RavinderSinghPB
+
+if __name__ == '__main__':
+    t=int(input())
+    
+    for tcs in range(t):
+        n=int(input())
+        obj = Solution()
+        if obj.isLucky(n):
+            print(1)
+        else:
+            print(0)
+        
+# } Driver Code Ends
